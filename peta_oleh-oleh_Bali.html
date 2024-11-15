@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2743d29baeb2fd8a5d180e4bf96ca12c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2743d29baeb2fd8a5d180e4bf96ca12c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2743d29baeb2fd8a5d180e4bf96ca12c = L.map(
+                "map_2743d29baeb2fd8a5d180e4bf96ca12c",
+                {
+                    center: [-8.40876084104688, 115.20105291690847],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_77d051138ca5f2210b619e3879381788 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_77d051138ca5f2210b619e3879381788.addTo(map_2743d29baeb2fd8a5d180e4bf96ca12c);
+        
+    
+            var heat_map_c1e8c7f427f48f1de0f0cabb28eccdb8 = L.heatLayer(
+                [[-8.741965, 115.178427], [-8.670285, 115.207841], [-8.727416, 115.176756], [-8.643646, 115.255128]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_c1e8c7f427f48f1de0f0cabb28eccdb8.addTo(map_2743d29baeb2fd8a5d180e4bf96ca12c);
+        
+    
+            var marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_32e195f86c211a88dce70f11a01948b0 = L.marker(
+                [-8.741965, 115.178427],
+                {}
+            ).addTo(marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080);
+        
+    
+        var popup_2f454616cf233fa433e5cb6709d046de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3dacd8dd51e4f5a215955fad4a844249 = $(`<div id="html_3dacd8dd51e4f5a215955fad4a844249" style="width: 100.0%; height: 100.0%;">krisna toko oleh-oleh khas bali:Jl. Raya Tuban No.2X, Tuban, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_2f454616cf233fa433e5cb6709d046de.setContent(html_3dacd8dd51e4f5a215955fad4a844249);
+            
+        
+
+        marker_32e195f86c211a88dce70f11a01948b0.bindPopup(popup_2f454616cf233fa433e5cb6709d046de)
+        ;
+
+        
+    
+    
+            var marker_2dabd32f27edb2cf8e8a20c947792151 = L.marker(
+                [-8.670285, 115.207841],
+                {}
+            ).addTo(marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080);
+        
+    
+        var popup_a74b2a007780f4da014513677f890256 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5e375e2965884dc06cd61275cc6b6ad = $(`<div id="html_e5e375e2965884dc06cd61275cc6b6ad" style="width: 100.0%; height: 100.0%;">erlangga 2 pusat oleh-oleh bali:Jl. Nusa Kambangan No.162, Dauh Puri Kauh, Kec. Denpasar Bar., Kota Denpasar, Bali 80113</div>`)[0];
+                popup_a74b2a007780f4da014513677f890256.setContent(html_e5e375e2965884dc06cd61275cc6b6ad);
+            
+        
+
+        marker_2dabd32f27edb2cf8e8a20c947792151.bindPopup(popup_a74b2a007780f4da014513677f890256)
+        ;
+
+        
+    
+    
+            var marker_56b6edc3058824a3d20e22ea4a2089d4 = L.marker(
+                [-8.727416, 115.176756],
+                {}
+            ).addTo(marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080);
+        
+    
+        var popup_cff5f747d160b73f06e357454b51295e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0a67f37ea2909ee4a7f01a8ff228586 = $(`<div id="html_e0a67f37ea2909ee4a7f01a8ff228586" style="width: 100.0%; height: 100.0%;">larisa oleh-oleh bali:Jl. Raya Kuta No.45 B, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_cff5f747d160b73f06e357454b51295e.setContent(html_e0a67f37ea2909ee4a7f01a8ff228586);
+            
+        
+
+        marker_56b6edc3058824a3d20e22ea4a2089d4.bindPopup(popup_cff5f747d160b73f06e357454b51295e)
+        ;
+
+        
+    
+    
+            var marker_e929f20445bc070f401960f507132c00 = L.marker(
+                [-8.643646, 115.255128],
+                {}
+            ).addTo(marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080);
+        
+    
+        var popup_ca754a21127ff16391a21ccd67f3838f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f1afe00df1d291be2d52e217cf15754 = $(`<div id="html_3f1afe00df1d291be2d52e217cf15754" style="width: 100.0%; height: 100.0%;">dewata oleh-oleh khas bli:Jl. Bypass Ngurah Rai No.53, Kesiman Kertalangu, Kec. Denpasar Tim., Kota Denpasar, Bali 80237</div>`)[0];
+                popup_ca754a21127ff16391a21ccd67f3838f.setContent(html_3f1afe00df1d291be2d52e217cf15754);
+            
+        
+
+        marker_e929f20445bc070f401960f507132c00.bindPopup(popup_ca754a21127ff16391a21ccd67f3838f)
+        ;
+
+        
+    
+    
+            marker_cluster_bd8d18086ae3f0a789ec7a17ec0ba080.addTo(map_2743d29baeb2fd8a5d180e4bf96ca12c);
+        
+</script>
+</html>

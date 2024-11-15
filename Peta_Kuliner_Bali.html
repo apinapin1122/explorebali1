@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6bf892af92547bd12933afc4af2a57e3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6bf892af92547bd12933afc4af2a57e3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6bf892af92547bd12933afc4af2a57e3 = L.map(
+                "map_6bf892af92547bd12933afc4af2a57e3",
+                {
+                    center: [-8.40876084104688, 115.20105291690847],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5e4265d494f8f4ec1bcdff3779fd9946 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5e4265d494f8f4ec1bcdff3779fd9946.addTo(map_6bf892af92547bd12933afc4af2a57e3);
+        
+    
+            var heat_map_057e36f21af91ae4d49323ada05c1d45 = L.heatLayer(
+                [[-8.740536, 115.178826], [-8.741535, 115.178967], [-8.682279, 115.154901], [-8.710883, 115.185674], [-8.682167, 115.207161]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_057e36f21af91ae4d49323ada05c1d45.addTo(map_6bf892af92547bd12933afc4af2a57e3);
+        
+    
+            var marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_44d9fff908591620cfa0d156b5c26b08 = L.marker(
+                [-8.740536, 115.178826],
+                {}
+            ).addTo(marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe);
+        
+    
+        var popup_22c2d1a71701b7cf2cc667a9ccfe0988 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f330fc7de1251d365ac312d96661c376 = $(`<div id="html_f330fc7de1251d365ac312d96661c376" style="width: 100.0%; height: 100.0%;">Ayam betutu khas gilimanuk:Jl. Raya Tuban No.2X, Tuban, Kec.Kuta, Kab. Badung, Bali 80361</div>`)[0];
+                popup_22c2d1a71701b7cf2cc667a9ccfe0988.setContent(html_f330fc7de1251d365ac312d96661c376);
+            
+        
+
+        marker_44d9fff908591620cfa0d156b5c26b08.bindPopup(popup_22c2d1a71701b7cf2cc667a9ccfe0988)
+        ;
+
+        
+    
+    
+            var marker_60a47879fa4becb99cf9146f349b6a5e = L.marker(
+                [-8.741535, 115.178967],
+                {}
+            ).addTo(marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe);
+        
+    
+        var popup_7b850e5f3ebdbed4d704a1072caa715c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_518d06d852bd676b08ec49feced4ce16 = $(`<div id="html_518d06d852bd676b08ec49feced4ce16" style="width: 100.0%; height: 100.0%;">bebek tepi sawah:Tuban, Kuta, Badung Regency, Bali 80361</div>`)[0];
+                popup_7b850e5f3ebdbed4d704a1072caa715c.setContent(html_518d06d852bd676b08ec49feced4ce16);
+            
+        
+
+        marker_60a47879fa4becb99cf9146f349b6a5e.bindPopup(popup_7b850e5f3ebdbed4d704a1072caa715c)
+        ;
+
+        
+    
+    
+            var marker_9362b0c45e95a6cddd20bb78dcfc894f = L.marker(
+                [-8.682279, 115.154901],
+                {}
+            ).addTo(marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe);
+        
+    
+        var popup_8866e51e853db6f23c0dcff72fe1f536 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95dafb948d99cd0940c149661a576ec7 = $(`<div id="html_95dafb948d99cd0940c149661a576ec7" style="width: 100.0%; height: 100.0%;">nasi ayam kedewatan ibu mangku:Jl. Celagi Basur No.7, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_8866e51e853db6f23c0dcff72fe1f536.setContent(html_95dafb948d99cd0940c149661a576ec7);
+            
+        
+
+        marker_9362b0c45e95a6cddd20bb78dcfc894f.bindPopup(popup_8866e51e853db6f23c0dcff72fe1f536)
+        ;
+
+        
+    
+    
+            var marker_acce3b9f9271dfe046cd7a55e2e90d9b = L.marker(
+                [-8.710883, 115.185674],
+                {}
+            ).addTo(marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe);
+        
+    
+        var popup_5603b6a4edcacd08dab79d3c192f8743 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab1542aeb0f2b906eb96841839a954f6 = $(`<div id="html_ab1542aeb0f2b906eb96841839a954f6" style="width: 100.0%; height: 100.0%;">bali timbungan:Jl. Sunset Road No.88, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_5603b6a4edcacd08dab79d3c192f8743.setContent(html_ab1542aeb0f2b906eb96841839a954f6);
+            
+        
+
+        marker_acce3b9f9271dfe046cd7a55e2e90d9b.bindPopup(popup_5603b6a4edcacd08dab79d3c192f8743)
+        ;
+
+        
+    
+    
+            var marker_7703cbecad4e90c23e9b56fb047eb3ae = L.marker(
+                [-8.682167, 115.207161],
+                {}
+            ).addTo(marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe);
+        
+    
+        var popup_7c5758434b830031dd4507452c309fca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a81c1843ea967c9364796b2b95388f1 = $(`<div id="html_4a81c1843ea967c9364796b2b95388f1" style="width: 100.0%; height: 100.0%;">ikan bakar dan goreng khas jimbaran:Jl. Pulau Kawe No.57, Pedungan, Denpasar Selatan, Kota Denpasar, Bali 80114</div>`)[0];
+                popup_7c5758434b830031dd4507452c309fca.setContent(html_4a81c1843ea967c9364796b2b95388f1);
+            
+        
+
+        marker_7703cbecad4e90c23e9b56fb047eb3ae.bindPopup(popup_7c5758434b830031dd4507452c309fca)
+        ;
+
+        
+    
+    
+            marker_cluster_10aabd32a4ed4bb6f227c2d6003090fe.addTo(map_6bf892af92547bd12933afc4af2a57e3);
+        
+</script>
+</html>

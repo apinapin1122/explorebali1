@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3ce6f24a4c24bfc2e2088d1b2923277e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3ce6f24a4c24bfc2e2088d1b2923277e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3ce6f24a4c24bfc2e2088d1b2923277e = L.map(
+                "map_3ce6f24a4c24bfc2e2088d1b2923277e",
+                {
+                    center: [-8.40876084104688, 115.20105291690847],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fc4184c3755867e8cccfc40159e60e72 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_fc4184c3755867e8cccfc40159e60e72.addTo(map_3ce6f24a4c24bfc2e2088d1b2923277e);
+        
+    
+            var heat_map_62bb855109477cf97312959eeb1d8347 = L.heatLayer(
+                [[-8.733808, 115.167074], [-8.719255, 115.16932], [-8.836907, 115.181469], [-8.777366, 155.224372], [-8.712741, 115.172969]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_62bb855109477cf97312959eeb1d8347.addTo(map_3ce6f24a4c24bfc2e2088d1b2923277e);
+        
+    
+            var marker_cluster_57e754611433171d08889d9780767932 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_392c261a12ba23fa6109a31766f0190f = L.marker(
+                [-8.733808, 115.167074],
+                {}
+            ).addTo(marker_cluster_57e754611433171d08889d9780767932);
+        
+    
+        var popup_054841a1fa79a1c1bdba88f6b0cb889c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7072e01cdd31cb3ddd94bdd85dfa1883 = $(`<div id="html_7072e01cdd31cb3ddd94bdd85dfa1883" style="width: 100.0%; height: 100.0%;">bintang kuta hotel:Jl. Kartika Plaza, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_054841a1fa79a1c1bdba88f6b0cb889c.setContent(html_7072e01cdd31cb3ddd94bdd85dfa1883);
+            
+        
+
+        marker_392c261a12ba23fa6109a31766f0190f.bindPopup(popup_054841a1fa79a1c1bdba88f6b0cb889c)
+        ;
+
+        
+    
+    
+            var marker_8e31fd54b29c9419c429f56199b41d7b = L.marker(
+                [-8.719255, 115.16932],
+                {}
+            ).addTo(marker_cluster_57e754611433171d08889d9780767932);
+        
+    
+        var popup_f0b561203025eaf675a8dc0f9164eb28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5ff41e7bf44ca3e1dabca194c2a6c77 = $(`<div id="html_f5ff41e7bf44ca3e1dabca194c2a6c77" style="width: 100.0%; height: 100.0%;">kuta seaview boutique resort:Jl. Pantai Kuta, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_f0b561203025eaf675a8dc0f9164eb28.setContent(html_f5ff41e7bf44ca3e1dabca194c2a6c77);
+            
+        
+
+        marker_8e31fd54b29c9419c429f56199b41d7b.bindPopup(popup_f0b561203025eaf675a8dc0f9164eb28)
+        ;
+
+        
+    
+    
+            var marker_d501c9287ed92ce27091dc8bd214c1d7 = L.marker(
+                [-8.836907, 115.181469],
+                {}
+            ).addTo(marker_cluster_57e754611433171d08889d9780767932);
+        
+    
+        var popup_414f9bfda41ed8b6250127c300c08f36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9aeb1164affd1b0e5d18d2987307d27a = $(`<div id="html_9aeb1164affd1b0e5d18d2987307d27a" style="width: 100.0%; height: 100.0%;">pandawa hill resort:Jl. Pantai Pandawa No.15, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_414f9bfda41ed8b6250127c300c08f36.setContent(html_9aeb1164affd1b0e5d18d2987307d27a);
+            
+        
+
+        marker_d501c9287ed92ce27091dc8bd214c1d7.bindPopup(popup_414f9bfda41ed8b6250127c300c08f36)
+        ;
+
+        
+    
+    
+            var marker_c69c6a09496b36df4d07f26486aec6c2 = L.marker(
+                [-8.777366, 155.224372],
+                {}
+            ).addTo(marker_cluster_57e754611433171d08889d9780767932);
+        
+    
+        var popup_855aeecf7235881e2c433893d3c19726 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfd8b050ef0b75baa54407a1debca74e = $(`<div id="html_dfd8b050ef0b75baa54407a1debca74e" style="width: 100.0%; height: 100.0%;">ikosharold resort benoa:Jl. Pratama No.62, Tj. Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_855aeecf7235881e2c433893d3c19726.setContent(html_dfd8b050ef0b75baa54407a1debca74e);
+            
+        
+
+        marker_c69c6a09496b36df4d07f26486aec6c2.bindPopup(popup_855aeecf7235881e2c433893d3c19726)
+        ;
+
+        
+    
+    
+            var marker_c780ced68e3c321b2923a6ec68dca6ca = L.marker(
+                [-8.712741, 115.172969],
+                {}
+            ).addTo(marker_cluster_57e754611433171d08889d9780767932);
+        
+    
+        var popup_501a895f8acbe2aea29138fb9b02b3b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29abde1f7de6b6b8a3e0c041ccb1a3f5 = $(`<div id="html_29abde1f7de6b6b8a3e0c041ccb1a3f5" style="width: 100.0%; height: 100.0%;">kuta beach hotel:Jl. Benesari, Legian, Kec. Kuta, Kabupaten Badung, Bali 80361</div>`)[0];
+                popup_501a895f8acbe2aea29138fb9b02b3b5.setContent(html_29abde1f7de6b6b8a3e0c041ccb1a3f5);
+            
+        
+
+        marker_c780ced68e3c321b2923a6ec68dca6ca.bindPopup(popup_501a895f8acbe2aea29138fb9b02b3b5)
+        ;
+
+        
+    
+    
+            marker_cluster_57e754611433171d08889d9780767932.addTo(map_3ce6f24a4c24bfc2e2088d1b2923277e);
+        
+</script>
+</html>
